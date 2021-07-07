@@ -18,6 +18,8 @@ android {
 dependencies {
     implementation project(':deps:extension-api')
     implementation group: 'com.unity3d.ads', name: 'unity-ads', version: '3.6.0'
-    implementation platform('com.google.firebase:firebase-bom:28.2.0')
-    implementation 'com.google.firebase:firebase-analytics'
+    //    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+//    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
 }
