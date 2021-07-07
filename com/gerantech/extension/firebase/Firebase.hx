@@ -20,7 +20,7 @@ class Firebase {
 	////java binings
 	private static var libInit:Firebase->String->Void =
 		#if (android && openfl)
-		lime.system.JNI.createStaticMethod("com/gerantech/extension/unityads/UnityAdsWrapper", "init", "(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
+		lime.system.JNI.createStaticMethod("com/gerantech/extension/firebase/FirebaseWrapper", "init", "(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
 		#else
 		function(o:Firebase, s:String):Void {};
 		#end
