@@ -1,6 +1,6 @@
 package com.gerantech.extension.firebase;
 
-import android.os.Bundle;
+// import android.os.Bundle;
 
 import org.haxe.extension.Extension;
 import org.haxe.lime.HaxeObject;
@@ -35,14 +35,14 @@ public class FirebaseWrapper extends Extension {
              }
         }));
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(mainContext);
+        // mFirebaseAnalytics = FirebaseAnalytics.getInstance(mainContext);
 	}
 
 	public static void logEvent(String placementId) {
-		Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, placementId);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, placementId);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "text");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+		// Bundle bundle = new Bundle();
+        // bundle.putString(FirebaseAnalytics.Param.ITEM_ID, placementId);
+        // bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, placementId);
+        // bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "text");
+        // mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 	}
 }

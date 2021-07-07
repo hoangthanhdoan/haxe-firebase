@@ -21,8 +21,9 @@ class Firebase {
 	private static var libInit:Firebase->String->Bool->Bool->Void =
 		#if (android && openfl)
 		lime.system.JNI.createStaticMethod("com/gerantech/extension/firebase/FirebaseWrapper", "init", "(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
+        // function(o:Firebase, s:String, b1:Bool, b2:Bool):Void {};
 		#else
-		function(o:Firebase, s:String):Void {};
+		function(o:Firebase, s:String, b1:Bool, b2:Bool):Void {};
 		#end
 
 	// event handlers
