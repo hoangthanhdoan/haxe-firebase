@@ -1,5 +1,7 @@
 package com.gerantech.extension.firebase;
 
+import android.os.Bundle;
+
 import org.haxe.extension.Extension;
 import org.haxe.lime.HaxeObject;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -38,9 +40,9 @@ public class FirebaseWrapper extends Extension {
 
 	public static void logEvent(String placementId) {
 		Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, placementId);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, placementId);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "text");
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
 	}
 }

@@ -15,6 +15,6 @@ public class FirebaseWrapperListener {
 
 	private void send(String type, Object arg0, Object arg1) {
 		Log.w(TAG, arg0 + " " + arg1);
-		UnityAdsWrapper.callbackObject.call3("listen", type, arg0, arg1);
+		FirebaseWrapper.callbackObject.call3("listen", type, arg0, arg1);
 	}
 }
