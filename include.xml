@@ -2,7 +2,7 @@
 <project>
 	
 	<!-- Use the following for an Android Java extension, not needed otherwise -->
-	<dependency name="unityads" path="dependencies/android" if="android" />
+	<dependency name="firebasehaxe" path="dependencies/android" if="android" />
 	<android extension="com.gerantech.extension.unityads.UnityAdsWrapper" />
 	<android extension="com.gerantech.extension.firebase.FirebaseWrapper" />
 	
