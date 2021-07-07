@@ -8,7 +8,7 @@ class Firebase {
 	private static var _instance:Firebase = null;
 
 	public static function init(stringID:String):Void {
-		libInit(getInstance(), stringID);
+		libInit(getInstance(), stringID, true, true);
 	}
 
 	public static function getInstance():Firebase {
@@ -18,7 +18,7 @@ class Firebase {
 	}
 
 	////java binings
-	private static var libInit:Firebase->String->Void =
+	private static var libInit:UnityAds->String->Bool->Bool->Void =
 		#if (android && openfl)
 		lime.system.JNI.createStaticMethod("com/gerantech/extension/firebase/FirebaseWrapper", "init", "(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
 		#else
